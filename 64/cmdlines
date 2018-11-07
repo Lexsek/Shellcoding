@@ -1,0 +1,2 @@
+nasm -f elf64 netcat_shellcode.asm -o netcat_shellcode.o
+ld -m elf_x86_64 -s netcat_shellcode.o -o netcat_shellcode.elf
