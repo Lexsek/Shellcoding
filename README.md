@@ -8,7 +8,9 @@ Stuff related to shellcoding (shellcodes, tools, examples, tutorials)
 #### Calling convention
 
 Syscall in EAX
+
 Arguments : EBX, ECX, EDX, ESI, EDI, EBP
+
 Return value in EAX
 
 ### 64 bits ELF
@@ -16,7 +18,9 @@ Return value in EAX
 #### Calling convention
 
 Syscall in RAX
+
 RDI, RSI, RDX, RCX, R8, R9
+
 Return value in RAX
 
 #### Calling convention
