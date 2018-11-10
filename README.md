@@ -19,7 +19,7 @@ Return value in EAX
 
 Syscall in RAX
 
-RDI, RSI, RDX, RCX, R8, R9
+Arguments : RDI, RSI, RDX, RCX, R8, R9
 
 Return value in RAX
 
