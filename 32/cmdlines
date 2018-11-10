@@ -1,3 +1,3 @@
-nasm -f elf32 netcat_shellcode.asm -o netcat_shellcode.o
-ld -m elf_i386 -s netcat_shellcode.o -o netcat_shellcode.elf
-objdump -d netcat_shellcode.elf --disassembler-options=intel > objdump_intel
+nasm -f file.asm -o file.o
+ld -m elf_i386 -s file.o -o file.elf
+objdump -d file.elf --disassembler-options=intel > objdump_intel
