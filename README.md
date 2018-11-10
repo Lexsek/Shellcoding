@@ -13,15 +13,19 @@ Arguments : EBX, ECX, EDX, ESI, EDI, EBP
 
 Return value in EAX
 
+syscall with int 0x80
+
 ### 64 bits ELF
 
 #### Calling convention
 
 Syscall in RAX
 
-Arguments : RDI, RSI, RDX, RCX, R8, R9
+Arguments : RDI, RSI, RDX, R10, R9, R8
 
 Return value in RAX
+
+syscall with syscall
 
 #### Calling convention
 
