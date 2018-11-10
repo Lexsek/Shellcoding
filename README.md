@@ -46,3 +46,15 @@ gcc -m32 shellcode_executor.c -o shellcode_32.elf
 ##### 64 bits shellcode
 
 gcc shellcode_executor.c -o shellcode_64.elf
+
+### shellcode_executor.py
+
+Executes a shellcode in python
+
+Usage :
+
+./shellcode_executor.py <file>
+  
+The file must contains the shellcode like this :
+ 
+\xef\xbe\xad\xde
