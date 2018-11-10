@@ -32,3 +32,17 @@ Return value in RAX
 Dumps a shellcode string from a valid ELF file using objdump
 
 I recommend you creating an alias pointing to the dump_shellcode.sh
+
+### shellcode_executor.c
+
+Executes a shellcode in C
+
+Be careful about the fact that the shellcode is 32 or 64 bits.
+
+##### 32 bits shellcode
+
+gcc -m32 shellcode_executor.c -o shellcode_32.elf 
+
+##### 64 bits shellcode
+
+gcc shellcode_executor.c -o shellcode_64.elf
