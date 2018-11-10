@@ -23,7 +23,7 @@ addr_page = (addr // pagesize) * pagesize
 # Get the first page start address
 
 for page_start in range(addr_page, addr + len(shellcode_data), pagesize):
-    assert libc.mprotect(ctypes.cast(page_start, ctypes.c_void_p), pagesize, 0x4) == 0
+    libc.mprotect(ctypes.cast(page_start, ctypes.c_void_p), pagesize, 0x4) == 0
     # Crawls pages where the shellcode is and give PROT_EXECUTE rights to the pages
 
 function()
